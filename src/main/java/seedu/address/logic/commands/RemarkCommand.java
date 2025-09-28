@@ -5,6 +5,7 @@ import static seedu.address.commons.util.CollectionUtil.requireAllNonNull;
 import seedu.address.commons.core.index.Index;
 import seedu.address.logic.commands.exceptions.CommandException;
 import seedu.address.model.Model;
+import seedu.address.model.person.Remark;
 
 /**
  * Adds a remark to an existing person in the address book.
@@ -24,14 +25,14 @@ public class RemarkCommand extends Command {
     public static final String MESSAGE_ARGUMENTS = "Index: %1$d, Remark: %2$s";
 
     private final Index index;
-    private final String remark;
+    private final Remark remark;
 
     /**
      * Creates a RemarkCommand to add a remark to the specified {@code Person}
      * @param index of the person in the filtered person list to edit
      * @param remark of the person
      */
-    public RemarkCommand(Index index, String remark) {
+    public RemarkCommand(Index index, Remark remark) {
         requireAllNonNull(index, remark);
         this.index = index;
         this.remark = remark;
