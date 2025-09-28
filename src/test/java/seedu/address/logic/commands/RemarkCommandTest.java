@@ -15,7 +15,7 @@ public class RemarkCommandTest {
     private static final String MESSAGE_NOT_IMPLEMENTED_YET = "This feature is not implemented yet.";
     private final Model model = new ModelManager(getTypicalAddressBook(), new UserPrefs());
     private final AddressBookParser parser = new AddressBookParser();
-    
+
     @Test
     public void execute() {
         assertCommandFailure(new RemarkCommand(), model, MESSAGE_NOT_IMPLEMENTED_YET);
