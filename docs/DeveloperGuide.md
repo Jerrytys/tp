@@ -724,7 +724,7 @@ testers are expected to do more *exploratory* testing.
       **Expected**: The record in week y for the student at index x is edited with the given attendance, participation, and submission scores. Details of the edited record is shown in the result display.
 
    3. **Other incorrect record commands to try**: Refer to 1c and 1d<br>
-      **Expected**: Similar to 1c and 1d
+      **Expected**: Similar to 1c and 1d.
 <br>
 
 ### Deleting a Student Record
@@ -762,7 +762,7 @@ testers are expected to do more *exploratory* testing.
 
    1. **Prerequisites**: At least 1 Student listed in the student list panel on the left.
     
-   2. **Test case**: `view 1`
+   2. **Test case**: `view 1`<br>
       **Expected**: Right-hand panel is updated to display the record overview of the student at index 1, showing calculated record statistics. Status message shows the success message: Viewing record of Student: [Student].<br>
 
 2. **Viewing student record with invalid index**
