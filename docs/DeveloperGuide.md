@@ -957,3 +957,21 @@ Team size: 5
 
 6. **Provide better visualisation for View**: The current view shown in Right Side Panel displays student records for 13 weeks, but does not provide a visual representation of the week numbers.
     We note that this may make it difficult for TAs to quickly identify a specific week's record. We plan to include additional visualisations that provide a clear representation of week number.
+
+7. **Enhance `find` command to support more flexible searching:**
+   The current implementation of the `find` command only searches by first name, middle name or last name. We plan to extend it to support partial words.
+    
+   **Example:** Finding by partial name.
+
+   **Current implementation:** Searchable only by first name, middle name or last name. (e.g. `find Alex`).  
+
+   **Planned enhancement:** Searchable by partial name (e.g. `find Al` will find a student with name Alex Yeoh).
+
+8. **Enhance `sort` command to support more flexible sorting:**
+   The current implementation of the `sort` command only sorts students in descending order. We plan to extend it to support sort students in ascending order as well.
+
+   **Example:** Sort students by attendance percentage in ascending order.
+
+   **Current implementation:** User only can sort students in descending order.
+
+   **Planned enhancement:** User can sort students in ascending order as well.
