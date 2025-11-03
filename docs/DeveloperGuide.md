@@ -905,6 +905,8 @@ testers are expected to do more *exploratory* testing.
 
 Team size: 5
 
+<div style="counter-reset: page-break-counter;">
+
 1. **Allow optional fields for editing student records:**
 
     The current record command implementation requires TAs to re-type all score fields (`ATTENDANCE_SCORE`, `PARTICIPATION_SCORE`, and `SUBMISSION_SCORE`) even when editing only one field. We plan to enhance the `record` command to accept optional fields, allowing TAs to update only the specific score(s) they intend to modify.
@@ -926,7 +928,7 @@ Team size: 5
 
    **Planned enhancement:** `setMaxScore sub/3 part/6`
 
-<div style="page-break-after: always;"></div>
+<div style="page-break-after: always; break-after: page; counter-increment: page-break-counter;"></div>
 
 1. **Enhance `find` command to support more field types:** 
 
@@ -960,7 +962,7 @@ Team size: 5
 
     **Planned enhancement:** Error message highlighting duplicate phone number found. Student is not added.
 
-<div style="page-break-after: always;"></div>
+<div style="page-break-after: always; break-after: page; counter-increment: page-break-counter;"></div>
 
 1. **Provide better visualisation for View**: 
 
@@ -992,7 +994,7 @@ Team size: 5
 
    **Planned enhancement:** User can sort students in ascending order as well. (e.g., `sort asc/a`)
 
-<div style="page-break-after: always;"></div>
+<div style="page-break-after: always; break-after: page; counter-increment: page-break-counter;"></div>
 
 1. **Implement switching between multiple class data files:**
     
@@ -1010,6 +1012,8 @@ Team size: 5
    The **`ViewPanel`** currently displays the weekly records of a specific student. In certain scenarios, such as after running commands that modify the `StudentListPanel` (e.g. `sort`, `find`, `edit`), the `ViewPanel` may not update as intended. We plan to improve the real-time update of `ViewPanel` to handle these scenarios more reliably.
     
    **Planned Enhancement**: Implement robust state tracking using unique student identifiers and improve the observer pattern to maintain view consistency across all list operations. 
+
+</div>
 
 <div style="page-break-after: always;"></div>
 
