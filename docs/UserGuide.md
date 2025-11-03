@@ -16,10 +16,13 @@ With **TAHub**, you can easily:
 * Get a `trend` overview of all students' scores.
 * Access a complete suite of tools, including `edit`, `find`, `delete`, `sort`, `list`, `help`, and `clear`, for comprehensive student management.
 
+--------------------------------------------------------------------------------------------------------------------
+
 ### Table of Contents
 * Table of Contents
 {:toc}
 
+--------------------------------------------------------------------------------------------------------------------
 <div style="page-break-after: always;"></div>
 
 ## Guide Usage
@@ -202,6 +205,8 @@ Format: `list`
 
 [Back to Table of Contents](#table-of-contents)
 
+<div style="page-break-after: always;"></div>
+
 ### Editing a student : `edit`
 
 Edits an existing student in TAHub.
@@ -221,6 +226,7 @@ Examples:
 
 [Back to Table of Contents](#table-of-contents)
 
+<div style="page-break-after: always;"></div>
 
 ### Locating students by name: `find`
 
@@ -316,8 +322,6 @@ This command is useful for correcting data entry errors, such as when a record w
 
 [Back to Table of Contents](#table-of-contents)
 
-<div style="page-break-after: always;"></div>
-
 ### Viewing student record: `view`
 
 Displays the weekly records of a specific student.
@@ -402,6 +406,8 @@ TAHub data is saved in the hard disk automatically after the input of any comman
 
 [Back to Table of Contents](#table-of-contents)
 
+<div style="page-break-after: always;"></div>
+
 ### Editing the data file
 
 TAHub data are saved automatically as a JSON file `[JAR file location]/data/TAHub.json`. Advanced users are welcome to update data directly by editing that data file.
@@ -414,6 +420,7 @@ Additionally, certain erroneous edits may cause TAHub to behave unexpectedly (e.
 [Back to Table of Contents](#table-of-contents)
 
 --------------------------------------------------------------------------------------------------------------------
+<div style="page-break-after: always;"></div>
 
 ## FAQ
 
