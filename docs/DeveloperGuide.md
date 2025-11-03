@@ -974,11 +974,11 @@ Team size: 5
 
    The current implementation of the `sort` command only sorts students in descending order. We plan to extend it to support sort students in ascending order as well.
 
-   **Example:** Sort students by attendance percentage in ascending order. (e.g., `sort asc/a`)
+   **Example:** Sort students by attendance percentage in ascending order. 
 
    **Current implementation:** User only can sort students in descending order.
 
-   **Planned enhancement:** User can sort students in ascending order as well.
+   **Planned enhancement:** User can sort students in ascending order as well. (e.g., `sort asc/a`)
 
 9. **Implement switching between multiple class data files:**
     
