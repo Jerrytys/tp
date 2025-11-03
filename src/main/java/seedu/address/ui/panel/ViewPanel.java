@@ -11,7 +11,6 @@ import javafx.scene.layout.StackPane;
 import seedu.address.commons.core.LogsCenter;
 import seedu.address.commons.core.index.Index;
 import seedu.address.logic.Logic;
-import seedu.address.model.ReadOnlyAddressBook;
 import seedu.address.model.student.Student;
 import seedu.address.ui.StudentCard;
 import seedu.address.ui.UiPart;
@@ -43,11 +42,10 @@ public class ViewPanel extends UiPart<Region> {
      * Sets the student to be displayed in the view window.
      */
     public void setStudent(Logic logic, Index studentIndex) {
-        ReadOnlyAddressBook addressBook = logic.getAddressBook();
-        ObservableList<Student> studentList = addressBook.getStudentList();
-        this.student = studentList.get(studentIndex.getZeroBased());
+        ObservableList<Student> filtered = logic.getFilteredStudentList();
+        this.student = filtered.get(studentIndex.getZeroBased());
         if (filteredListener != null) {
-            studentList.removeListener(filteredListener);
+            filtered.removeListener(filteredListener);
         }
         filteredListener = change -> Platform.runLater(() -> {
             while (change.next()) {
@@ -57,12 +55,12 @@ public class ViewPanel extends UiPart<Region> {
                 }
             }
             // Handle deletion or disappearance
-            if (!studentList.contains(student)) {
+            if (!filtered.contains(student)) {
                 showPlaceholders(false);
             }
         });
 
-        studentList.addListener(filteredListener);
+        filtered.addListener(filteredListener);
     }
     /**
      * Fills the inner parts of the view window.
@@ -90,8 +88,7 @@ public class ViewPanel extends UiPart<Region> {
     private <T> void checkReplacement(ListChangeListener.Change<T> change) {
         for (T oldS : change.getRemoved()) {
             if (oldS.equals(student)) {
-                int studentIndex = change.getRemoved().indexOf(oldS);
-                student = (Student) change.getAddedSubList().get(studentIndex);
+                student = (Student) change.getAddedSubList().get(change.getRemoved().indexOf(oldS));
                 fillInnerPart();
                 return;
             }
