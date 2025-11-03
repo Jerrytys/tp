@@ -7,14 +7,14 @@ title: User Guide
 
 **TAHub** is a desktop application designed for *NUS Computer Science Teaching Assistants (TAs)* to efficiently organise student contacts and monitor weekly engagement.
 
-If you are comfortable with the Command Line Interface (CLI) and type quickly, **TAHub** is built for you. **TAHub** allows you to complete student management tasks faster than with traditional mouse-based applications, while still providing the convenience and clarity of a Graphical User Interface (GUI).
+If you are comfortable with the Command Line Interface (CLI) and type quickly, **TAHub** is built for you. **TAHub** allows you to complete student management tasks faster than traditional mouse-based applications, while still providing the convenience and clarity of a Graphical User Interface (GUI).
 
 With **TAHub**, you can easily:
 * `add` a new student with their details such as name, student number, phone number, email, telegram, and optional tags.
 * `record` a student's attendance, participation, and submission scores for any given week.
 * `view` a specified student's records across the semester.
 * Get a `trend` overview of all students' scores.
-* ...and access a complete suite of tools, including `edit`, `find`, `delete`, `sort`, `list`, `help`, and `clear`, for comprehensive student management.
+* Access a complete suite of tools, including `edit`, `find`, `delete`, `sort`, `list`, `help`, and `clear`, for comprehensive student management.
 
 ### Table of Contents
 * Table of Contents
@@ -54,7 +54,7 @@ These are the key components of the TAHub user interface (UI):
 | S/N | Component          | Description                                                                                                                                      |
 |-----|--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
 | 1   | Command Box        | This is the primary input field where TAs enter commands to execute various operations in TAHub.                                                 |
-| 2   | Result display     | This is the primary output field where immediate feedback and the execution status of the most recently executed command is displayed to the TA. |
+| 2   | Result Display     | This is the primary output field where immediate feedback and the execution status of the most recently executed command is displayed to the TA. |
 | 3   | Student List Panel | This panel displays a list of students in TAHub.                                                                                                 |
 | 4   | Right Side Panel   | This is the secondary output field used to display detailed visual summaries and other additional information.                                   |
 
@@ -104,7 +104,7 @@ These are the key components of the TAHub user interface (UI):
   e.g. `n/NAME [t/TAG]` can be used as `n/John Doe t/friend` or as `n/John Doe`.
 
 * Items in curly braces mean “choose exactly one”.
-  e.g. `sort {/a|/p|/s}` can be used as `sort /a`, `sort /p` or as `sort /s`.
+  e.g. `sort {/a,/p,/s}` can be used as `sort /a`, `sort /p` or as `sort /s`.
 
 * Items with `…`​ after them can be used multiple times including zero times.<br>
   e.g. `[t/TAG]…​` can be used as ` ` (i.e. 0 times), `t/friend`, `t/friend t/family` etc.
@@ -163,14 +163,14 @@ Format: `add n/NAME sn/STUDENT_NUMBER p/PHONE_NUMBER e/EMAIL tele/TELEGRAM [t/TA
 
 **Student Parameter Constraints:**
 
-| Parameter Name | Constraint                                                                                                                                                                                                                                                                                                                                                             | Notes                                                                                                                                                                                                                                                                    |
-|----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `NAME` | Alphabetic characters and spaces, not blank, maximum length of 100 characters.                                                                                                                                                                                                                                                                                         | Non-standard characters (numbers `0-9`, hyphens `-`, apostrophes `'`, periods `.`, slashes `/`, accents) trigger a warning, but are accepted. <br><br>May include `/` if not preceded by a parameter-like prefix (eg. <code>&nbsp;sn/</code>, <code>&nbsp;tele/</code>). |
-| `STUDENT_NUMBER` | Format: `AXXXXXXXZ` where `A` is the character 'A', `X` is any digit 0-9, and `Z` is any letter.                                                                                                                                                                                                                                                                       | Letters are case-insensitive.                                                                                                                                                                                                                                            |
-| `PHONE_NUMBER` | At least 3 digits, maximum length of 30 characters. May start with `+`, and contain optional `-` separators.                                                                                                                                                                                                                                                           | Non-standard characters (parentheses `()`, periods `.` spaces) trigger a warning, but are accepted.<br/><br/>Non-standard formats trigger a warning but are accepted.                                                                                                    |
+| Parameter Name | Constraint                                                                                                                                                                                                                                                                                                                                                               | Notes                                                                                                                                                                                                                                                                    |
+|----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `NAME` | Alphabetic characters and spaces, not blank, maximum length of 100 characters.                                                                                                                                                                                                                                                                                           | Non-standard characters (numbers `0-9`, hyphens `-`, apostrophes `'`, periods `.`, slashes `/`, accents) trigger a warning, but are accepted. <br><br>May include `/` if not preceded by a parameter-like prefix (eg. <code>&nbsp;sn/</code>, <code>&nbsp;tele/</code>). |
+| `STUDENT_NUMBER` | Format: `AXXXXXXXZ` where `A` is the character 'A', `X` is any digit 0-9, and `Z` is any letter.                                                                                                                                                                                                                                                                         | Letters are case-insensitive.                                                                                                                                                                                                                                            |
+| `PHONE_NUMBER` | At least 3 digits, maximum length of 30 characters. May start with `+`, and contain optional `-` separators.                                                                                                                                                                                                                                                             | Non-standard characters (parentheses `()`, periods `.` spaces) trigger a warning, but are accepted.<br/><br/>Non-standard formats trigger a warning but are accepted.                                                                                                    |
 | `EMAIL` | Format: `local-part@domain`.<br/>`local-part`: Alphanumeric with special characters: `+_.-` (cannot start/end with special characters).<br/>`domain`: One or more labels separated by `.`.<br/>Label: Start/end with alphanumeric characters, may contain `-` in between. Final label must be 2+ characters long.<br/>Examples: `example@gmail.com`, `test@u.nus.edu.sg` | Must follow the exact format.                                                                                                                                                                                                                                            |
-| `TELEGRAM` | Alphanumeric and underscores only, not blank, maximum length of 100 characters.                                                                                                                                                                                                                                                                                        | Must follow the exact format.                                                                                                                                                                                                                                            |
-| `TAG` | Alphanumeric characters, spaces, special characters `+` and `#`, must not be blank, and maximum length of 30 characters.                                                                                                                                                                                                                                           | Multiple tags allowed.                                                                                                                                                                                                                                                   |
+| `TELEGRAM` | Alphanumeric and underscores only, not blank, maximum length of 100 characters.                                                                                                                                                                                                                                                                                          | Must follow the exact format.                                                                                                                                                                                                                                            |
+| `TAG` | Alphanumeric characters, spaces, special characters `+` and `#`, not blank, maximum length of 30 characters.                                                                                                                                                                                                                                                             | Multiple tags allowed.                                                                                                                                                                                                                                                   |
 
 <div markdown="span" class="alert alert-info">:information_source: **Note:**
 Students are uniquely identified by their Student Number. Hence, they can have duplicate names, emails, phone numbers, and telegram handles. This feature was included to allow users to temporarily reuse placeholder values when certain information is unavailable (e.g., `placeholder@example.com`, `00000000`). We plan to remove this feature in future enhancements by implementing optional fields, which will provide a more robust solution for handling incomplete student information.
@@ -210,7 +210,7 @@ Format: `edit INDEX [n/NAME] [sn/STUDENT_NUMBER] [p/PHONE] [e/EMAIL] [tele/TELEG
 * Edits the student at the specified `INDEX`. The index refers to the index number shown in the displayed student list. The index **must be a positive integer** 1, 2, 3, …​
 * Existing values will be updated to the input values.
 * At least one of the optional fields must be provided.
-* Refer to [Student Parameter Constraints in adding a student](#adding-a-student-add) for the individual parameter constraints.
+* Parameters have same constraints as [adding a student](#adding-a-student-add).
 * When editing tags, the existing tags of the student will be removed i.e. adding of tags is not cumulative.
 * You can remove all the student’s tags by typing `t/` without specifying any tags after it.
 
@@ -243,7 +243,7 @@ Format: `find KEYWORD [MORE_KEYWORDS]…​`
 
 :information_source: **Note:**<br>
 
-* The `find` command updates the student list shown in the left panel. Subsequent commands that uses `INDEX` (e.g. `delete 1`, `view 2`) will refer to the index shown in this **filtered list**.
+* The `find` command updates the student list shown in the Student List Panel. Subsequent commands that uses `INDEX` (e.g. `delete 1`, `view 2`) will refer to the index shown in this **filtered list**.
 
 * Keywords for the find command are not restricted to alphabetic characters. 
 
@@ -264,7 +264,7 @@ Deletes the specified student from TAHub.
 Format: `delete INDEX`
 
 * Deletes the student at the specified `INDEX`.
-* The index refers to the index number shown in the displayed student list.
+* The index refers to the index number shown in the Student List Panel.
 * The index **must be a positive integer** 1, 2, 3, …​
 
 Examples:
@@ -288,13 +288,13 @@ Format: `record INDEX week/WEEK_NUMBER att/ATTENDANCE_SCORE sub/SUBMISSION_SCORE
 
 **Record Parameter Constraints**
 
-|Parameter| Constraints                                | Notes                                                                                                                                                                |
-|---------|:-------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|`INDEX`| Positive integer 1, 2, 3, …​               |                                                                                                                                                                      |
-|`WEEK_NUMBER`| Integer from **1** to **13** (inclusive)   |                                                                                                                                                                      |
-|`ATTENDANCE_SCORE`| **0** (absent) or **1** (present)          |                                                                                                                                                                      |
-|`SUBMISSION_SCORE`| **0** (not submitted) or **1** (submitted) | Indicates overall completion status of all assignments. The TA determines what constitutes 1 (e.g. all assignments submitted) and 0 (e.g. partial or no submission). |
-|`PARTICIPATION_SCORE`| Integer from **0** to **5** (inclusive)    | Serves as a personal assessment scale for the TA. Its meaning is determined by the TA and does not necessarily reflect any external, module defined score range.     |
+|Parameter| Constraints                               | Notes                                                                                                                                                                |
+|---------|:------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|`INDEX`| Positive integer 1, 2, 3, …​              |                                                                                                                                                                      |
+|`WEEK_NUMBER`| Integer from **1** to **13** (inclusive)  |                                                                                                                                                                      |
+|`ATTENDANCE_SCORE`| **0** (absent) or **1** (present)         |                                                                                                                                                                      |
+|`SUBMISSION_SCORE`| **0** or **1**                            | Indicates overall completion status of all assignments. The TA determines what constitutes 1 (e.g. all assignments submitted) and 0 (e.g. partial or no submission). |
+|`PARTICIPATION_SCORE`| Integer from **0** to **5** (inclusive)   | Serves as a personal assessment scale for the TA. Its meaning is determined by the TA and does not necessarily reflect any external, module defined score range.     |
 
 Examples:
 * `record 1 week/1 att/1 sub/0 part/4`
@@ -338,7 +338,7 @@ Examples:
 
 <div style="page-break-after: always;"></div>
 
-### Viewing overall trend of all student records: `trend`
+### Viewing overall trend of class: `trend`
 
 Displays an overall summary of each student's records from all recorded weeks.
 
@@ -361,10 +361,10 @@ The Trend shown in Right Side Panel always reflects the students currently shown
 
 Sort students based on their attendance, participation, or submission percentages, in descending order.
 
-Format:
-* By attendance: `sort /a` 
-* By participation: `sort /p` 
-* By submission: `sort /s`
+Format: `sort {/a,/p,/s}` 
+- `sort/a` means sort by attendance percentage.
+- `sort/p` means sort by participation percentage.
+- `sort/s` means sort by submission percentage.
 
 ![result for 'sort /a'](images/SortResult.png)
 
@@ -446,17 +446,17 @@ Furthermore, certain edits can cause the TAHub to behave in unexpected ways (e.g
 
 Action | Format, Examples
 --------|------------------
-**Add** | `add n/NAME sn/STUDENT_NUMBER p/PHONE_NUMBER e/EMAIL tele/TELEGRAM [t/TAG]…​` <br> e.g., `add n/James Ho sn/A1234567z p/22224444 e/jamesho@example.com tele/hames_ho t/friend t/colleague`
+**Add** | `add n/NAME sn/STUDENT_NUMBER p/PHONE_NUMBER e/EMAIL tele/TELEGRAM [t/TAG]…​` <br> e.g., `add n/James Ho sn/A1234567z p/22224444 e/jamesho@example.com tele/james_ho t/friend t/colleague`
 **Clear** | `clear`
 **Delete** | `delete INDEX`<br> e.g., `delete 3`
 **Edit** | `edit INDEX [n/NAME] [p/PHONE_NUMBER] [e/EMAIL] [sn/STUDENT_NUMBER] [tele/TELEGRAM] [t/TAG]…​`<br> e.g.,`edit 2 n/James Lee e/jameslee@example.com`
 **Record** (Add/Edit)| `record INDEX week/WEEK_NUMBER att/ATTENDANCE_SCORE sub/SUBMISSION_SCORE part/PARTICIPATION_SCORE`<br> e.g., `record 1 week/1 att/1 sub/0 part/4`
-**Record** (Remove)| `record INDEX week/WEEK_NUMBER` <br> e.g., `record 1 week/1`
+**Record** (Delete)| `record INDEX week/WEEK_NUMBER` <br> e.g., `record 1 week/1`
 **Find** | `find KEYWORD [MORE_KEYWORDS]…​`<br> e.g., `find James Jake`
 **List** | `list`
 **View** | `view INDEX`<br> e.g., `view 2`
 **Trend** | `trend`
-**Sort** | `sort /a` / `sort /p` / `sort /s`
+**Sort** | `sort {/a,/p,/s}`
 **Exit** | `exit`
 **Help** | `help`
 

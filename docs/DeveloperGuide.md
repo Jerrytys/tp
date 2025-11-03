@@ -982,7 +982,31 @@ Team size: 5
 
 <br>
 
-7. **Implement switching between multiple class data files:**
+7. **Enhance `find` command to support more flexible searching:**
+
+   The current implementation of the `find` command only searches by entire keywords. We plan to extend it to support partial words.
+
+   **Example:** Finding by partial name.
+
+   **Current implementation:** Searchable only by entire keywords. (e.g. `find Alex`).
+
+   **Planned enhancement:** Searchable by partial words. (e.g. `find Al` will find a student with name Alex Yeoh).
+
+<br>
+
+8. **Enhance `sort` command to support more flexible sorting:**
+
+   The current implementation of the `sort` command only sorts students in descending order. We plan to extend it to support sort students in ascending order as well.
+
+   **Example:** Sort students by attendance percentage in ascending order.
+
+   **Current implementation:** User only can sort students in descending order.
+
+   **Planned enhancement:** User can sort students in ascending order as well. (e.g., `sort asc/a`)
+
+<br>
+
+9. **Implement switching between multiple class data files:**
     
     The current implementation uses a single data file (`TAHub.json`) to store all student data. TAs managing multiple tutorial classes must manually back-up and restore different data files, or maintain multiple installations of TAHub. We plan to introduce a `switchClass` command that allows the TAs to seamlessly switch between different class data files within the same TAHub installation. 
 

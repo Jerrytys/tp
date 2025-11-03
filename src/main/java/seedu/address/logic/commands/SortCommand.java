@@ -28,8 +28,8 @@ public class SortCommand extends Command {
             "Sort all students based on attendance or participation or submission percentages:\n";
 
     public static final String MESSAGE_HELP_DESCRIPTION =
-            COMMAND_WORD + " {" + PREFIX_SORT_BY + PREFIX_SORT_ATTENDANCE + "|"
-            + PREFIX_SORT_BY + PREFIX_SORT_PARTICIPATION + "|"
+            COMMAND_WORD + " {" + PREFIX_SORT_BY + PREFIX_SORT_ATTENDANCE + ","
+            + PREFIX_SORT_BY + PREFIX_SORT_PARTICIPATION + ","
             + PREFIX_SORT_BY + PREFIX_SORT_SUBMISSION + "}";
 
     public static final String MESSAGE_SUCCESS_ATTENDANCE = "Sorted all students based on attendance.";
