@@ -221,7 +221,6 @@ Examples:
 
 [Back to Table of Contents](#table-of-contents)
 
-<div style="page-break-after: always;"></div>
 
 ### Locating students by name: `find`
 
@@ -416,8 +415,6 @@ Additionally, certain erroneous edits may cause TAHub to behave unexpectedly (e.
 
 --------------------------------------------------------------------------------------------------------------------
 
-<div style="page-break-after: always;"></div>
-
 ## FAQ
 
 **Q**: How do I transfer my data to another Computer?<br>
@@ -454,8 +451,7 @@ Action | Format, Examples
 **List** | `list`
 **View** | `view INDEX`<br> e.g., `view 2`
 **Trend** | `trend`
-**Sort** | `sort {/a,/p,/s}`
+**Sort** | `sort {/a,/p,/s}`<br> e.g., `sort /a`
 **Exit** | `exit`
 **Help** | `help`
-
 [Back to Table of Contents](#table-of-contents)
