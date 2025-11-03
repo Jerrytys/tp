@@ -368,6 +368,7 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
 <div style="page-break-after: always;"></div>
 <br>
+
 **Use case: UC02 Delete a student**
 
 **Preconditions:** The student to be deleted has an existing entry in TAHub.
@@ -408,6 +409,7 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
 <div style="page-break-after: always;"></div>
 <br>
+
 **Use case: UC04 Find student**
 
 **Guarantees:** All student entries with matching names will be displayed.
@@ -543,6 +545,7 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
       <br>Use case ends.
 
 <div style="page-break-after: always;"></div>
+<br>
 
 **Use case: UC10 Edit student record**
 
@@ -568,6 +571,7 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
 <br>
 <div style="page-break-after: always;"></div>
+<br>
 
 **Use case: UC11 Delete student record**
 
@@ -913,7 +917,7 @@ Team size: 5
     
 <br>
 
-1. **Allow configurable maximum scores in a student record:**
+2. **Allow configurable maximum scores in a student record:**
 
     The current implementation of `ATTENDANCE_SCORE` (binary 0 or 1), `SUBMISSION_SCORE` (binary 0 or 1) and `PARTICIPATION_SCORE` (range 0 to 5) are limited in supporting custom weighting of scores and more diverse grading schemes. We plan to introduce a `setMaxScore` command to allow TAs to dynamically configure the maximum score of the `ATTENDANCE_SCORE`, `SUBMISSION_SCORE` and `PARTICIPATION_SCORE` parameters of a student record in TAHub. This new configuration will apply to all existing and future student records, providing essential flexibility. Validation logic will be implemented to safeguard existing records during a change in the maximum scores.
 
@@ -925,7 +929,7 @@ Team size: 5
 
 <div style="page-break-after: always;"></div>
 
-1. **Enhance `find` command to support more field types:** 
+3. **Enhance `find` command to support more field types:** 
 
     The current implementation of the `find` command only searches by name. We plan to extend it to support additional fields, such as student number and tags. This will make it easier for TAs to quickly find relevant students based on different criteria.
 
@@ -937,7 +941,7 @@ Team size: 5
 
 <br>
 
-1. **Enhance `add` command to support optional fields:** 
+4. **Enhance `add` command to support optional fields:** 
 
     The current implementation of the `add` command requires TAs to provide all contact fields (`PHONE_NUMBER`, `EMAIL`, `TELEGRAM`) when adding a new student. This forces users to provide placeholder values when certain information is unavailable. We plan to make these fields optional, allowing users to leave them blank if the information is not yet known. `NAME` and `STUDENT_NUMBER` will remain compulsory as they are used for student identification, and can be easily obtained.
 
@@ -949,7 +953,7 @@ Team size: 5
 
 <div style="page-break-after: always;"></div>
 
-1. **Enforce uniqueness constraints on contact details:**
+5. **Enforce uniqueness constraints on contact details:**
 
     Currently, students are uniquely identified only by their student number, allowing duplicate phone numbers, emails and telegram handles. This was intentionally designed to let users temporarily use placeholder values (e.g., `placeholder@example.com`, `00000000`) when certain information is unavailable. Once optional fields are implemented (see enhancement #4), we will enforce uniqueness constraints on `PHONE_NUMBER`, `EMAIL` and `TELEGRAM` to prevent duplicate entries. This ensures data integrity for contact information.
 
@@ -961,7 +965,7 @@ Team size: 5
 
 <br>
 
-1. **Provide better visualisation for View**: 
+6. **Provide better visualisation for View**: 
 
     The current view shown in `RightSidePanel` displays student records for 13 weeks, but does not provide a visual representation of the week numbers.
     We note that this may make it difficult for TAs to quickly identify a specific week's record. We plan to include additional visualisations that provide a clear representation of week number.
@@ -971,7 +975,7 @@ Team size: 5
 
 <br>
 
-1. **Enhance `find` command to support more flexible searching:**
+7. **Enhance `find` command to support more flexible searching:**
 
    The current implementation of the `find` command only searches by entire keywords. We plan to extend it to support partial words.
 
@@ -983,7 +987,7 @@ Team size: 5
 
 <div style="page-break-after: always;"></div>
 
-1. **Enhance `sort` command to support more flexible sorting:**
+8. **Enhance `sort` command to support more flexible sorting:**
 
    The current implementation of the `sort` command only sorts students in descending order. We plan to extend it to support sort students in ascending order as well.
 
@@ -995,7 +999,7 @@ Team size: 5
 
 <br>
 
-1. **Implement switching between multiple class data files:**
+9. **Implement switching between multiple class data files:**
     
     The current implementation uses a single data file (`TAHub.json`) to store all student data. TAs managing multiple tutorial classes must manually back-up and restore different data files, or maintain multiple installations of TAHub. We plan to introduce a `switchClass` command that allows the TAs to seamlessly switch between different class data files within the same TAHub installation. 
 
@@ -1005,9 +1009,9 @@ Team size: 5
 
     **Planned enhancement:** `switchClass CS2103T_T02` (switches to and loads data from `CS2103T_T02.json`).
 
-<div style="page-break-after: always;"></div>
+<br>
 
-1. **Enhance `view` command to support better real-time updates:**
+10. **Enhance `view` command to support better real-time updates:**
     
    The **`ViewPanel`** currently displays the weekly records of a specific student. In certain scenarios, such as after running commands that modify the `StudentListPanel` (e.g. `sort`, `find`, `edit`), the `ViewPanel` may not update as intended. We plan to improve the real-time update of `ViewPanel` to handle these scenarios more reliably.
     
