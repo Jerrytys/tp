@@ -960,6 +960,7 @@ Team size: 5
     The current view shown in Right Side Panel displays student records for 13 weeks, but does not provide a visual representation of the week numbers.
     We note that this may make it difficult for TAs to quickly identify a specific week's record. We plan to include additional visualisations that provide a clear representation of week number.
 
+
 7. **Enhance `find` command to support more flexible searching:**
 
    The current implementation of the `find` command only searches by entire keywords. We plan to extend it to support partial words.
@@ -969,6 +970,7 @@ Team size: 5
    **Current implementation:** Searchable only by entire keywords. (e.g. `find Alex`).  
 
    **Planned enhancement:** Searchable by partial words. (e.g. `find Al` will find a student with name Alex Yeoh).
+
 
 8. **Enhance `sort` command to support more flexible sorting:**
 
@@ -980,6 +982,7 @@ Team size: 5
 
    **Planned enhancement:** User can sort students in ascending order as well. (e.g., `sort asc/a`)
 
+
 9. **Implement switching between multiple class data files:**
     
     The current implementation uses a single data file (`TAHub.json`) to store all student data. TAs managing multiple tutorial classes must manually back-up and restore different data files, or maintain multiple installations of TAHub. We plan to introduce a `switchClass` command that allows the TAs to seamlessly switch between different class data files within the same TAHub installation. 
@@ -990,3 +993,33 @@ Team size: 5
 
     **Planned enhancement:** `switchClass CS2103T_T02` (switches to and loads data from `CS2103T_T02.json`).
 
+
+## **Appendix: Effort Estimation**
+
+### Difficulty Level and Challenges Faced
+
+The development of TAHub presented moderate to high difficulty, with several key challenges faced.
+
+* **Extending AB3's data model:** The original AB3 simply stored simple contact information, with strict constraint requirements. We had to significantly restructure the model to support weekly records (attendance, participation, submission) for each student, and implement greater flexibility in creating existing fields (e.g., `NAME`, `PHONE_NUMBER`).
+* **Complex UI Components:** Implementing the dynamic `RightSidePanel` that can display `HelpPanel`, `ViewPanel` and `TrendPanel` based on user actions, required careful state management and coordination between UI and Model components.
+* **Record management system:** Designing a flexible record system that supports adding, editing, and deleting weekly records while preventing duplicate entries and maintaining consistency across operations was technically challenging. The system needed to handle edge cases such as storing of record data.
+* **Sorting and filtering logic:** Implementing the `sort` command required computing average scores from score lists and handling edge cases where students have missing records, ensuring proper ordering in all scenarios.
+
+### Effort Required
+
+The project required significant effort in the following areas:
+
+* **Familiarising with existing AB3 code:** We had to familiarise ourselves with the existing AB3 codebase, which took considerable time due to its complexity and our limited prior exposure to it.
+* **Extending AB3's data model:** Restructuring the model to support new data types and fields.
+* **UI Development:** Substantial changes were made to the AB3 UI to support the new features. Namely, the addition of the `RightSidePanel` to display additional information dynamically.
+* **Testing:** Writing extensive test cases to ensure TAHub is bug-free and robust.
+* **Documentation:** Writing a comprehensive User Guide and Developer Guide to ensure that our application is easy to use and maintain.
+
+### Achievements
+
+Despite the complexity, we achieved the following:
+
+* **Functional MVP for TAHub:** All planned features were successfully implemented and tested. The application successfully addresses the core needs of NUS CS TAs.
+* **User-friendly interface:** The UI is intuitive, informative, and responsive to user actions.
+* **Robust data model:** The data model is flexible and robust, handling multiple different entity types correctly.
+* **Comprehensive Testing and documentation:** The application is well-tested and well-documented.
