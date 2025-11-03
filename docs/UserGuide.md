@@ -173,7 +173,7 @@ Format: `add n/NAME sn/STUDENT_NUMBER p/PHONE_NUMBER e/EMAIL tele/TELEGRAM [t/TA
 | `TAG` | Alphanumeric characters, spaces, special characters `+` and `#`, must not be blank, and maximum length of 30 characters.                                                                                                                                                                                                                                           | Multiple tags allowed.                                                                                                                                                                                                                                                   |
 
 <div markdown="span" class="alert alert-info">:information_source: **Note:**
-Students are uniquely identified by their Student Number. Hence, they can have duplicate names, emails, phone numbers, and telegram handles. This feature was included to allow users to temporarily reuse placeholder values when certain information is unavailable (e.g., `placeholder@example.com`, `00000000`). We plan to remove this feature in future enhancements by implementing optional fields, which will provide a more robust solution for handling incomplete student information.
+Students are uniquely identified by their Student Number. Hence, they can have duplicate names, emails, phone numbers, and telegram handles. This feature was included to allow users to temporarily reuse placeholder values when certain information is unavailable (e.g., `placeholder@example.com`, `00000000`).
 </div>
 
 <div markdown="block" class="alert alert-warning">:exclamation: **Important:**
