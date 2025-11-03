@@ -970,3 +970,34 @@ Team size: 5
     **Current implementation:** Single data file (`TAHub.json`). TAs must manually rename/replace files to manage multiple classes.
 
     **Planned enhancement:** `switchClass CS2103T_T02` (switches to and loads data from `CS2103T_T02.json`).
+
+
+## **Appendix: Effort Estimation**
+
+### Difficulty Level and Challenges Faced
+
+The development of TAHub presented moderate to high difficulty, with several key challenges faced.
+
+* **Extending AB3's data model:** The original AB3 simply stored simple contact information, with strict constraint requirements. We had to significantly restructure the model to support weekly records (attendance, participation, submission) for each student, and implement greater flexibility in creating existing fields (e.g., `NAME`, `PHONE_NUMBER`).
+* **Complex UI Components:** Implementing the dynamic `RightSidePanel` that switches between `HelpPanel`, `ViewPanel` and `TrendPanel` required careful state management and coordination between UI and Model components.
+* **Record management system:** Designing a flexible record system that supports adding, editing, and deleting weekly records while preventing duplicate entries and maintaining consistency across operations was technically challenging. The system needed to handle edge cases such as storing of record data.
+* **Sorting and filtering logic:** Implementing the `sort` command required computing average scores from score lists and handling edge cases where student's have missing records, ensuring proper ordering in all scenarios.
+
+### Effort Required
+
+The project required significant effort in the following areas:
+
+* **Familiarising with existing AB3 code:** We had to familiarise ourselves with the existing AB3 codebase, which took considerable time due to its complexity and our limited prior exposure to it.
+* **Extending AB3's data model:** Restructuring the model to support new data types and fields.
+* **UI Development:** Substantial changes were made to the AB3 UI to support the new features. Namely, the addition of the `RightSidePanel` to display additional information dynamically.
+* **Testing:** Writing extensive test cases to ensure TAHub is bug-free and robust.
+* **Documentation:** Writing a comprehensive User Guide and Developer Guide to ensure that our application is easy to use and maintain.
+
+### Achievements
+
+Despite the complexity, we achieved the following:
+
+* **Functional MVP for TAHub:** All planned features were successfully implemented and tested. The application successfully addresses the core needs of NUS CS TAs.
+* **User-friendly interface:** The UI is intuitive, informative, and responsive to user actions.
+* **Robust data model:** The data model is flexible and robust, handling multiple different entity types correctly.
+* **Comprehensive Testing and documentation:** The application is well-tested and well-documented.
