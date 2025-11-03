@@ -340,17 +340,16 @@ Examples:
 
 ### Viewing overall trend of all student records: `trend`
 
-Displays the trend overview of records for all students.
+Displays an overall summary of each student's records from all recorded weeks.
 
 Format: `trend`<br>
 
 ![result for 'list' followed by 'view 2'](images/TrendResult.png)
 
-* Displays a summary of student records across the weeks for each student.
-* The summary of records is colour-coded for visual feedback based on the percentage of the total of each score.
+* Each student's summary is colour-coded for visual feedback based on the percentage of each score calculated over all recorded weeks.
 * Thresholds: Red (`< 50%`), Yellow (`>= 50%` but `< 80%`), Green (`>= 80%`).
 
-<div markdown="span" class="alert alert-primary">:bulb: **Tip:**
+<div markdown="span" class="alert alert-info">:information_source: **Note:**
 The Trend shown in Right Side Panel always reflects the students currently shown in the left panel—any sorting or filtering (e.g., via sort or list) updates the trends immediately.
 </div>
 
@@ -369,8 +368,12 @@ Format:
 
 ![result for 'sort /a'](images/SortResult.png)
 
+<div markdown="span" class="alert alert-info">:information_source: **Note:**
+The sort command reorders the student list in the Student List Panel. The Right Side Panel updates only if it is already showing Trend (i.e., The trend window is opened). 
+</div>
+
 <div markdown="span" class="alert alert-primary">:bulb: **Tip:**
-The sort command reorders the student list in the Student List Panel. The Right Side Panel updates only if it is already showing Trend (i.e., The trend window is opened).    
+To view the trend of students sorted by a score type (e.g. attendance) in descending order, simply run `list`, `sort /a` followed by `trend`.
 </div>
 
 [Back to Table of Contents](#table-of-contents)
