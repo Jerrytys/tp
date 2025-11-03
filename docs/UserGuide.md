@@ -454,4 +454,5 @@ Action | Format, Examples
 **Sort** | `sort {/a,/p,/s}`<br> e.g., `sort /a`
 **Exit** | `exit`
 **Help** | `help`
+
 [Back to Table of Contents](#table-of-contents)
