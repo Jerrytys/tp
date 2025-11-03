@@ -13,7 +13,7 @@ title: Developer Guide
 
 * Libraries used: JavaFX, Jackson, JUnit5
 
-* The guide usage section in the User Guide was reused with some changes from a current project [HealthNote](https://github.com/AY2526S1-CS2103T-F11-1/tp) ([UG](https://github.com/AY2526S1-CS2103T-F11-1/tp/blob/master/docs/UserGuide.md)).
+* The guide usage and user interface section in the User Guide was reused with some changes from a current project [HealthNote](https://github.com/AY2526S1-CS2103T-F11-1/tp) ([UG](https://github.com/AY2526S1-CS2103T-F11-1/tp/blob/master/docs/UserGuide.md)).
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -452,15 +452,15 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
 **Use case: UC06 Edit Student**
 
-**Preconditions:** The student to be edited has an existing entry in TAHub.
+**Preconditions:** The student entry to be edited is an existing entry in TAHub.
 
-**Guarantees:** The student's entry is edited.
+**Guarantees:** The student entry is edited.
 
 **MSS**
 
 1.  TA <u>lists entries (UC03)</u>.
-2.  TA requests to edit a student's entry.
-3.  TAHub edits the student's entry and displays a success message.
+2.  TA requests to edit a student entry.
+3.  TAHub edits the student entry and displays a success message.
     <br>Use case ends.
 
 **Extensions**
@@ -518,6 +518,7 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
 <br>
 
+
 **Use case: UC09 Add student record**
 
 **Preconditions:** The TA has already added the student to the class.
@@ -535,14 +536,13 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
     * 2a1. TAHub displays an error message.
     <br>Use case ends.
 * 3a. TA realises that he made an error in the added record.
-    * 3a1. TA requests to <u>edit student record UC10</u>.
+    * 3a1. TA requests to <u>edit student record (UC10)</u>.
       <br>Use case ends.
 * 3b. TA decides to scrape record entirely.
     * 3b1. TA requests to <u>delete student record (UC11)</u>.
       <br>Use case ends.
 
 <div style="page-break-after: always;"></div>
-<br>
 
 **Use case: UC10 Edit student record**
 
@@ -568,7 +568,6 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
 <br>
 <div style="page-break-after: always;"></div>
-<br>
 
 **Use case: UC11 Delete student record**
 
@@ -842,7 +841,7 @@ testers are expected to do more *exploratory* testing.
 
    1. **Prerequisites**: At least 1 Student listed in the `StudentListPanel` on the left.
     
-   2. **Test case**: `view 0` or `view x` (where x is larger than the list size)<br>
+   2. **Test case**: `view 0` or `view x` (where x is an integer larger than the student list size)<br>
       **Expected**: `RightSidePanel` remains unchanged. Error details shown in the status message.
 
 <div style="page-break-after: always;"></div>
@@ -865,18 +864,18 @@ testers are expected to do more *exploratory* testing.
 
 ### Sorting students
 
-1. **Successful sorting of students based on their attendance/participation/submission score**
+1. **Successful sorting of students based on their attendance/participation/submission score percentages**
 
    1. **Prerequisites**: List all students using the list command. Multiple students in the list.
    
    2. **Test case**: `sort /a` <br>
-      **Expected**: Students in the `StudentListPanel` are sorted by their attendance score in descending order. Students without records will be listed on the bottom of the panel.
+      **Expected**: Students in the `StudentListPanel` are sorted by their attendance score percentage in descending order. Students without records will be listed on the bottom of the panel.
 
    3. **Test case**: `sort /p` <br>
-      **Expected**: Students in the `StudentListPanel` are sorted by their participation score in descending order. Students without records will be listed on the bottom of the panel. 
+      **Expected**: Students in the `StudentListPanel` are sorted by their participation score percentage in descending order. Students without records will be listed on the bottom of the panel. 
 
    4. **Test case**: `sort /s` <br>
-      **Expected**: Students in the `StudentListPanel` are sorted by their submission score in descending order. Students without records will be listed on the bottom of the panel. 
+      **Expected**: Students in the `StudentListPanel` are sorted by their submission score percentage in descending order. Students without records will be listed on the bottom of the panel. 
 
 <div style="page-break-after: always;"></div>
 
@@ -887,14 +886,14 @@ testers are expected to do more *exploratory* testing.
    1. Delete the TAHub.json file 
    
    2. Launch the app by double-clicking the jar file. <br>
-      **Expected**: The app is launched successfully. The data file is created only after you run a command that triggers a save (for example, list, add, or any other valid command). After your first command, a new valid TAHub.json file with sample data will be created under /data, and sample students will appear in the left panel.
+      **Expected**: The app is launched successfully. The data file is created only after you run a command that triggers a save (for example, `list`, `add`, or any other valid command). After your first command, a new valid TAHub.json file with sample data will be created under `/data`, and sample students will appear in the `StudentListPanel` on the left.
 
 2. Dealing with corrupted data file
     
    1. Corrupt the TAHub.json file
 
    2.  Launch the app by double-clicking the jar file. <br>
-       **Expected**: The app is launched successfully. A new valid empty TAHub.json file is created under /data. The left hand panel is empty.
+       **Expected**: The app is launched successfully. A new valid empty TAHub.json file is created under `/data`. The `StudentListPanel` on the left is empty.
 
 <div style="page-break-after: always;"></div>
 
@@ -912,6 +911,7 @@ Team size: 5
  
    **Planned enhancement:** `record 1 week/1 part/5`
     
+<br>
 
 1. **Allow configurable maximum scores in a student record:**
 
@@ -935,6 +935,7 @@ Team size: 5
 
    **Planned enhancement:** Searchable by all fields (e.g. `find t/WeakInJava`)
 
+<br>
 
 1. **Enhance `add` command to support optional fields:** 
 
@@ -942,7 +943,7 @@ Team size: 5
 
     **Example:** Adding a student without providing `TELEGRAM`, `EMAIL`, `PHONE_NUMBER`.
 
-    **Current implementation:** All fields required except `TAG` (e.g. `add n/john sn/A1234567X p/99998888 e/john@example tele/john`).
+    **Current implementation:** All fields required except `TAG` (e.g. `add n/john sn/A1234567X p/00000000 e/placeholder@example.com tele/placeholder`).
 
     **Planned enhancement:** `add n/john sn/A1234567X`.
 
@@ -958,20 +959,25 @@ Team size: 5
 
     **Planned enhancement:** Error message highlighting duplicate phone number found. Student is not added.
 
+<br>
 
 1. **Provide better visualisation for View**: 
 
-    The current view shown in Right Side Panel displays student records for 13 weeks, but does not provide a visual representation of the week numbers.
+    The current view shown in `RightSidePanel` displays student records for 13 weeks, but does not provide a visual representation of the week numbers.
     We note that this may make it difficult for TAs to quickly identify a specific week's record. We plan to include additional visualisations that provide a clear representation of week number.
+    
+    **Planned enhancement:**
+    ![Enhanced View Result](images/EnhancedViewResult.jpg)
 
+<br>
 
 1. **Enhance `find` command to support more flexible searching:**
 
    The current implementation of the `find` command only searches by entire keywords. We plan to extend it to support partial words.
-    
+
    **Example:** Finding by partial name.
 
-   **Current implementation:** Searchable only by entire keywords. (e.g. `find Alex`).  
+   **Current implementation:** Searchable only by entire keywords. (e.g. `find Alex`).
 
    **Planned enhancement:** Searchable by partial words. (e.g. `find Al` will find a student with name Alex Yeoh).
 
@@ -981,12 +987,13 @@ Team size: 5
 
    The current implementation of the `sort` command only sorts students in descending order. We plan to extend it to support sort students in ascending order as well.
 
-   **Example:** Sort students by attendance percentage in ascending order. 
+   **Example:** Sort students by attendance percentage in ascending order.
 
    **Current implementation:** User only can sort students in descending order.
 
    **Planned enhancement:** User can sort students in ascending order as well. (e.g., `sort asc/a`)
 
+<br>
 
 1. **Implement switching between multiple class data files:**
     
