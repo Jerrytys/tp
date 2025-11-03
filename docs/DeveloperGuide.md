@@ -962,13 +962,13 @@ Team size: 5
 
 7. **Enhance `find` command to support more flexible searching:**
 
-   The current implementation of the `find` command only searches by first name, middle name or last name. We plan to extend it to support partial words.
+   The current implementation of the `find` command only searches by entire keywords. We plan to extend it to support partial words.
     
    **Example:** Finding by partial name.
 
    **Current implementation:** Searchable only by entire keywords. (e.g. `find Alex`).  
 
-   **Planned enhancement:** Searchable by partial name (e.g. `find Al` will find a student with name Alex Yeoh).
+   **Planned enhancement:** Searchable by partial words. (e.g. `find Al` will find a student with name Alex Yeoh).
 
 8. **Enhance `sort` command to support more flexible sorting:**
 
