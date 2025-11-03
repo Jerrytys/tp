@@ -20,6 +20,8 @@ With **TAHub**, you can easily:
 * Table of Contents
 {:toc}
 
+<div style="page-break-after: always;"></div>
+
 ## Guide Usage
 
 <div markdown="block" class="alert alert-info">
@@ -44,6 +46,7 @@ With **TAHub**, you can easily:
 </div>
 
 --------------------------------------------------------------------------------------------------------------------
+<div style="page-break-after: always;"></div>
 
 ## User Interface
 
@@ -159,18 +162,16 @@ Format: `add n/NAME sn/STUDENT_NUMBER p/PHONE_NUMBER e/EMAIL tele/TELEGRAM [t/TA
 * All the fields are required except for `TAG`.
 * You can have any number of tags (including 0). However, tags may not appear in the order that they are created.
 
-<div style="page-break-after: always;"></div>
-
 **Student Parameter Constraints:**
 
 | Parameter Name | Constraint                                                                                                                                                                                                                                                                                                                                                               | Notes                                                                                                                                                                                                                                                                    |
 |----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `NAME` | Alphabetic characters and spaces, not blank, maximum length of 100 characters.                                                                                                                                                                                                                                                                                           | Non-standard characters (numbers `0-9`, hyphens `-`, apostrophes `'`, periods `.`, slashes `/`, accents) trigger a warning, but are accepted. <br><br>May include `/` if not preceded by a parameter-like prefix (eg. <code>&nbsp;sn/</code>, <code>&nbsp;tele/</code>). |
-| `STUDENT_NUMBER` | Format: `AXXXXXXXZ` where `A` is the character 'A', `X` is any digit 0-9, and `Z` is any letter.                                                                                                                                                                                                                                                                         | Letters are case-insensitive.                                                                                                                                                                                                                                            |
-| `PHONE_NUMBER` | At least 3 digits, maximum length of 30 characters. May start with `+`, and contain optional `-` separators.                                                                                                                                                                                                                                                             | Non-standard characters (parentheses `()`, periods `.` spaces) trigger a warning, but are accepted.<br/><br/>Non-standard formats trigger a warning but are accepted.                                                                                                    |
+| `NAME` | Alphabetic characters and spaces, not blank, maximum 100 characters.                                                                                                                                                                                                                                                                                                     | Non-standard characters (numbers `0-9`, hyphens `-`, apostrophes `'`, periods `.`, slashes `/`, accents) trigger a warning, but are accepted. <br><br>May include `/` if not preceded by a parameter-like prefix (eg. <code>&nbsp;sn/</code>, <code>&nbsp;tele/</code>). |
+| `STUDENT_NUMBER` | Format: `AXXXXXXXZ` where `A` is the character 'A', `X` is any digit from 0-9, and `Z` is any letter.                                                                                                                                                                                                                                                                    | Letters are case-insensitive.                                                                                                                                                                                                                                            |
+| `PHONE_NUMBER` | At least 3 digits, maximum 30 characters. May start with `+`, and contain optional `-` separators.                                                                                                                                                                                                                                                                       | Non-standard characters (parentheses `()`, periods `.` spaces) trigger a warning, but are accepted.<br/><br/>Non-standard formats trigger a warning but are accepted.                                                                                                    |
 | `EMAIL` | Format: `local-part@domain`.<br/>`local-part`: Alphanumeric with special characters: `+_.-` (cannot start/end with special characters).<br/>`domain`: One or more labels separated by `.`.<br/>Label: Start/end with alphanumeric characters, may contain `-` in between. Final label must be 2+ characters long.<br/>Examples: `example@gmail.com`, `test@u.nus.edu.sg` | Must follow the exact format.                                                                                                                                                                                                                                            |
-| `TELEGRAM` | Alphanumeric and underscores only, not blank, maximum length of 100 characters.                                                                                                                                                                                                                                                                                          | Must follow the exact format.                                                                                                                                                                                                                                            |
-| `TAG` | Alphanumeric characters, spaces, special characters `+` and `#`, not blank, maximum length of 30 characters.                                                                                                                                                                                                                                                             | Multiple tags allowed.                                                                                                                                                                                                                                                   |
+| `TELEGRAM` | Alphanumeric and underscores only, not blank, maximum 100 characters.                                                                                                                                                                                                                                                                                                    | Must follow the exact format.                                                                                                                                                                                                                                            |
+| `TAG` | Alphanumeric characters, spaces, special characters `+` and `#`, not blank, maximum 30 characters.                                                                                                                                                                                                                                                                       | Multiple tags allowed.                                                                                                                                                                                                                                                   |
 
 <div markdown="span" class="alert alert-info">:information_source: **Note:**
 Students are uniquely identified by their Student Number. Hence, they can have duplicate names, emails, phone numbers, and telegram handles. This feature was included to allow users to temporarily reuse placeholder values when certain information is unavailable (e.g., `placeholder@example.com`, `00000000`).
@@ -219,6 +220,8 @@ Examples:
 *  `edit 2 n/Betsy Crower t/` Edits the name of the 2nd student to be `Betsy Crower` and clears all existing tags.
 
 [Back to Table of Contents](#table-of-contents)
+
+<div style="page-break-after: always;"></div>
 
 ### Locating students by name: `find`
 
@@ -279,8 +282,6 @@ Format: `record INDEX week/WEEK_NUMBER att/ATTENDANCE_SCORE sub/SUBMISSION_SCORE
 * **To create a new record:** Run the command with a target student's `INDEX` and a `WEEK_NUMBER` that currently has no associated record.
 * **To modify an existing record:** Run the command with a target student's `INDEX` and the record's `WEEK_NUMBER`. The existing record for that week will be replaced by the new score values provided in the command.
 * All parameters must be included regardless of whether you are creating a new record or editing an existing one.
-
-<div style="page-break-after: always;"></div>
 
 **Record Parameter Constraints**
 
@@ -374,6 +375,8 @@ To view the trend of students sorted by a score type (e.g. attendance) in descen
 
 [Back to Table of Contents](#table-of-contents)
 
+<div style="page-break-after: always;"></div>
+
 ### Clearing all entries : `clear`
 
 Clears all entries from TAHub.
@@ -396,7 +399,7 @@ Format: `exit`
 
 ### Saving the data
 
-TAHub data are saved in the hard disk automatically after any command that changes the data. There is no need to save manually.
+TAHub data is saved in the hard disk automatically after the input of any command that changes the data. There is no need to save manually.
 
 [Back to Table of Contents](#table-of-contents)
 
@@ -437,7 +440,6 @@ Additionally, certain erroneous edits may cause TAHub to behave unexpectedly (e.
 --------------------------------------------------------------------------------------------------------------------
 
 <div style="page-break-after: always;"></div>
-
 ## Command summary
 
 Action | Format, Examples
