@@ -173,7 +173,7 @@ Format: `add n/NAME sn/STUDENT_NUMBER p/PHONE_NUMBER e/EMAIL tele/TELEGRAM [t/TA
 | `TAG` | Alphanumeric characters, spaces, special characters `+` and `#`, not blank, maximum length of 30 characters.                                                                                                                                                                                                                                                             | Multiple tags allowed.                                                                                                                                                                                                                                                   |
 
 <div markdown="span" class="alert alert-info">:information_source: **Note:**
-Students are uniquely identified by their Student Number. Hence, they can have duplicate names, emails, phone numbers, and telegram handles. This feature was included to allow users to temporarily reuse placeholder values when certain information is unavailable (e.g., `placeholder@example.com`, `00000000`). We plan to remove this feature in future enhancements by implementing optional fields, which will provide a more robust solution for handling incomplete student information.
+Students are uniquely identified by their Student Number. Hence, they can have duplicate names, emails, phone numbers, and telegram handles. This feature was included to allow users to temporarily reuse placeholder values when certain information is unavailable (e.g., `placeholder@example.com`, `00000000`).
 </div>
 
 <div markdown="block" class="alert alert-warning">:exclamation: **Important:**
@@ -213,10 +213,6 @@ Format: `edit INDEX [n/NAME] [sn/STUDENT_NUMBER] [p/PHONE] [e/EMAIL] [tele/TELEG
 * Parameters have same constraints as [adding a student](#adding-a-student-add).
 * When editing tags, the existing tags of the student will be removed i.e. adding of tags is not cumulative.
 * You can remove all the student’s tags by typing `t/` without specifying any tags after it.
-
-<div markdown="span" class="alert alert-info">:information_source: **Note:**
-If the edited student's details are identical to the existing details (i.e., no actual changes were made), a message will be displayed indicating that the student's information remains unchanged.
-</div>
 
 Examples:
 *  `edit 1 p/91234567 e/johndoe@example.com` Edits the phone number and email address of the 1st student to be `91234567` and `johndoe@example.com` respectively.
@@ -410,7 +406,7 @@ TAHub data are saved automatically as a JSON file `[JAR file location]/data/TAHu
 
 <div markdown="span" class="alert alert-warning">:exclamation: **Caution:**
 If your changes to the data file make its format invalid, TAHub will discard all data and start with an empty data file at the next run. For the empty data file to replace the corrupted data file, you will need to enter a command (e.g. `list`). Hence, it is recommended to take a backup of the file before editing it.<br>
-Furthermore, certain edits can cause the TAHub to behave in unexpected ways (e.g., if a value entered is outside of the acceptable range). Therefore, edit the data file only if you are confident that you can update it correctly.
+Additionally, certain erroneous edits may cause TAHub to behave unexpectedly (e.g., application crash). Therefore, only edit the data file if you are confident that you can update it correctly.
 </div>
 
 [Back to Table of Contents](#table-of-contents)
