@@ -994,6 +994,14 @@ Team size: 5
     **Planned enhancement:** `switchClass CS2103T_T02` (switches to and loads data from `CS2103T_T02.json`).
 
 
+10. **Enhance `view` command to support better real-time updates:**
+    
+    The **`ViewPanel`** currently displays the weekly records of a specific student. In certain scenarios, such as after running commands that modify 
+    the `StudentListPanel` (e.g. `sort`, `find`, `edit`), the `ViewPanel` may not update as intended.
+    We plan to improve the real-time update of `ViewPanel` to handle these scenarios more reliably.
+    
+    **Planned Enhancement**: Implement robust state tracking using unique student identifiers and improve the observer pattern to maintain view consistency across all list operations. 
+
 ## **Appendix: Effort Estimation**
 
 ### Difficulty Level and Challenges Faced
