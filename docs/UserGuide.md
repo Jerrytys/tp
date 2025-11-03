@@ -3,7 +3,7 @@ layout: page
 title: User Guide
 ---
 
-![Introduction UI](images/IntroductionUI.png)
+![Introduction UI](images/Ui.png)
 
 **TAHub** is a desktop application designed for *NUS Computer Science Teaching Assistants (TAs)* to efficiently organise student contacts and monitor weekly engagement.
 
