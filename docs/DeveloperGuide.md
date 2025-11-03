@@ -914,8 +914,7 @@ Team size: 5
    **Current implementation:** `record 1 week/1 att/1 sub/1 part/5`
  
    **Planned enhancement:** `record 1 week/1 part/5`
-    
-<br>
+
 
 2. **Allow configurable maximum scores in a student record:**
 
@@ -927,7 +926,6 @@ Team size: 5
 
    **Planned enhancement:** `setMaxScore sub/3 part/6`
 
-<div style="page-break-after: always;"></div>
 
 3. **Enhance `find` command to support more field types:** 
 
@@ -939,7 +937,6 @@ Team size: 5
 
    **Planned enhancement:** Searchable by all fields (e.g. `find t/WeakInJava`)
 
-<br>
 
 4. **Enhance `add` command to support optional fields:** 
 
@@ -951,7 +948,6 @@ Team size: 5
 
     **Planned enhancement:** `add n/john sn/A1234567X`.
 
-<div style="page-break-after: always;"></div>
 
 5. **Enforce uniqueness constraints on contact details:**
 
@@ -963,7 +959,6 @@ Team size: 5
 
     **Planned enhancement:** Error message highlighting duplicate phone number found. Student is not added.
 
-<br>
 
 6. **Provide better visualisation for View**: 
 
@@ -973,7 +968,6 @@ Team size: 5
     **Planned enhancement:**
     ![Enhanced View Result](images/EnhancedViewResult.jpg)
 
-<br>
 
 7. **Enhance `find` command to support more flexible searching:**
 
@@ -985,7 +979,6 @@ Team size: 5
 
    **Planned enhancement:** Searchable by partial words. (e.g. `find Al` will find a student with name Alex Yeoh).
 
-<div style="page-break-after: always;"></div>
 
 8. **Enhance `sort` command to support more flexible sorting:**
 
@@ -997,7 +990,6 @@ Team size: 5
 
    **Planned enhancement:** User can sort students in ascending order as well. (e.g., `sort asc/a`)
 
-<br>
 
 9. **Implement switching between multiple class data files:**
     
@@ -1009,7 +1001,6 @@ Team size: 5
 
     **Planned enhancement:** `switchClass CS2103T_T02` (switches to and loads data from `CS2103T_T02.json`).
 
-<br>
 
 10. **Enhance `view` command to support better real-time updates:**
     
