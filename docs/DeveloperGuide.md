@@ -979,9 +979,9 @@ Team size: 5
 The development of TAHub presented moderate to high difficulty, with several key challenges faced.
 
 * **Extending AB3's data model:** The original AB3 simply stored simple contact information, with strict constraint requirements. We had to significantly restructure the model to support weekly records (attendance, participation, submission) for each student, and implement greater flexibility in creating existing fields (e.g., `NAME`, `PHONE_NUMBER`).
-* **Complex UI Components:** Implementing the dynamic `RightSidePanel` that switches between `HelpPanel`, `ViewPanel` and `TrendPanel` required careful state management and coordination between UI and Model components.
+* **Complex UI Components:** Implementing the dynamic `RightSidePanel` that can display `HelpPanel`, `ViewPanel` and `TrendPanel` based on user actions, required careful state management and coordination between UI and Model components.
 * **Record management system:** Designing a flexible record system that supports adding, editing, and deleting weekly records while preventing duplicate entries and maintaining consistency across operations was technically challenging. The system needed to handle edge cases such as storing of record data.
-* **Sorting and filtering logic:** Implementing the `sort` command required computing average scores from score lists and handling edge cases where student's have missing records, ensuring proper ordering in all scenarios.
+* **Sorting and filtering logic:** Implementing the `sort` command required computing average scores from score lists and handling edge cases where students have missing records, ensuring proper ordering in all scenarios.
 
 ### Effort Required
 
