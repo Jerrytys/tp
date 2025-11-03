@@ -448,7 +448,7 @@ Action | Format, Examples
 **Delete** | `delete INDEX`<br> e.g., `delete 3`
 **Edit** | `edit INDEX [n/NAME] [p/PHONE_NUMBER] [e/EMAIL] [sn/STUDENT_NUMBER] [tele/TELEGRAM] [t/TAG]…​`<br> e.g.,`edit 2 n/James Lee e/jameslee@example.com`
 **Record** (Add/Edit)| `record INDEX week/WEEK_NUMBER att/ATTENDANCE_SCORE sub/SUBMISSION_SCORE part/PARTICIPATION_SCORE`<br> e.g., `record 1 week/1 att/1 sub/0 part/4`
-**Record** (delete)| `record INDEX week/WEEK_NUMBER` <br> e.g., `record 1 week/1`
+**Record** (Delete)| `record INDEX week/WEEK_NUMBER` <br> e.g., `record 1 week/1`
 **Find** | `find KEYWORD [MORE_KEYWORDS]…​`<br> e.g., `find James Jake`
 **List** | `list`
 **View** | `view INDEX`<br> e.g., `view 2`
