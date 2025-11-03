@@ -10,3 +10,11 @@
     height: 21px;
     width: 21px
 }
+
+ol {
+    counter-reset: list-item;
+}
+
+li {
+    counter-increment: list-item;
+}

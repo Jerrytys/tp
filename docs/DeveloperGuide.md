@@ -926,6 +926,7 @@ Team size: 5
 
    **Planned enhancement:** `setMaxScore sub/3 part/6`
 
+<div style="page-break-after: always;"></div>
 
 1. **Enhance `find` command to support more field types:** 
 
@@ -959,6 +960,7 @@ Team size: 5
 
     **Planned enhancement:** Error message highlighting duplicate phone number found. Student is not added.
 
+<div style="page-break-after: always;"></div>
 
 1. **Provide better visualisation for View**: 
 
@@ -990,6 +992,7 @@ Team size: 5
 
    **Planned enhancement:** User can sort students in ascending order as well. (e.g., `sort asc/a`)
 
+<div style="page-break-after: always;"></div>
 
 1. **Implement switching between multiple class data files:**
     
